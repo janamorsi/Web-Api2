@@ -1,27 +1,39 @@
+import React from 'react';
+import { Routes, Route, Outlet } from 'react-router-dom'; 
 import Home from './pages/Home';
-import {Routes,Route,Outlet} from 'react-router-dom'
-import recipeDetail from './pages/recipeDetail';
+import RecipeDetail from './pages/recipeDetail';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-//using router dom for navigation, want to keep this navbar fixed in all pages 
+import LoginPage from './components/Login';
+import SignupPage from './components/Signup';
+import NotFound from './pages/NotFound';
+
+// Component layout with the fixed Navbar and Footer
 function Layout() {
   return (
     <>
-    <NavBar/>
-      <Outlet/>
-    <Footer/>
+      <NavBar />
+      <Outlet /> {/* This renders nested routes */}
+      <Footer />
     </>
-  )
+  );
 }
+
+// main App component with routing
 function App() {
   return (
     <div className="bg-black">
-        <Routes >
-          <Route path='/' element={<Layout/>}>
-          <Route index element={<Home/>}/>
-          <Route path='recipes/:id' element={<recipeDetail />}/>
-         </Route>
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="recipes/:id" element={<RecipeDetail />} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="signup" element={<SignupPage />} />
+
+          {/* Catch-all route for unknown paths */}
+          <Route path="*" element={<NotFound />} /> {/* Correct catch-all syntax */}
+        </Route>
+      </Routes>
     </div>
   );
 }

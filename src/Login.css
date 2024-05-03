@@ -1,0 +1,80 @@
+/* General Wrapper Style for Login and Signup */
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding-top: 60px; /* Adjust based on the navbar's height */
+    background-color: black; /* Dark background */
+}
+
+/* Container Style for Forms */
+.auth-container {
+    max-width: 400px;
+    width: 100%; /* Ensures it expands to full width */
+    padding: 20px;
+    background-color: black;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Slightly larger border-radius for rounded corners */
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+}
+
+/* Heading Style */
+.auth-heading {
+    margin-bottom: 20px;
+    color: white; /* Ensure text is readable on a dark background */
+}
+
+/* Form Styling */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: white; /* Consistent with background */
+}
+
+input {
+    width: 100%;
+    padding: 10px; /* Slightly more padding for better aesthetics */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white; /* Contrasts with the black background */
+}
+
+/* Button Styling */
+.auth-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.auth-button:hover {
+    background-color: #1f5dbb; /* Darker blue on hover */
+}
+
+/* Link Styling */
+.auth-link {
+    margin-top: 20px;
+}
+
+.auth-link a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s;
+}
+
+.auth-link a:hover {
+    color: #0056b3; /* Slightly darker blue on hover */
+}

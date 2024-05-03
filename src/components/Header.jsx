@@ -1,7 +1,7 @@
 import React from 'react';
 import { homebackg, banner1, banner2, banner3, banner4 } from '/Users/jana/Desktop/jayskitchen/src/images';
 
-// This file is for creating the home page header and the title
+// this file is for creating the home page header and the title
 // Array of images
 const images = [homebackg, banner1, banner2, banner3, banner4];
 
